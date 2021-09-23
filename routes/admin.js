@@ -1,11 +1,7 @@
 const express=require('express');
+const path=require('path');
 const Employee = require('../models/employees');
 const router=express.Router();
-
-router.use('/',(req,res,next)=>{
-    console.log("root");
-    next();
-});
 
 router.get('/customers',(req,res,next)=>{
     Employee.fetchAll()
